@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "wk.jsonpath": {
+      "version": "1.0.0",
+      "commands": [
+        "wk-json-path"
+      ]
+    }
+  }
+}
