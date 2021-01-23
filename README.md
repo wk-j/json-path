@@ -28,10 +28,12 @@ cat resource/input.json | wk-json-path '$.data[0].content[0].id'
 ```
 http -b 'https://reqres.in/api/users?page=2' \
     | wk-json-path "\$.data[?(@.last_name == 'Lawson')].email"
+
 michael.lawson@reqres.in
 
 http -b 'https://reqres.in/api/users?page=2' \
     | wk-json-path "\$.data[*].email"
+
 michael.lawson@reqres.in
 lindsay.ferguson@reqres.in
 tobias.funke@reqres.in
