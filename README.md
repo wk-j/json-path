@@ -25,7 +25,7 @@ cat resource/input.json | wk-json-path '$.data[0].content[0].id'
 
 ## Extract data from API
 
-```
+```bash
 http -b 'https://reqres.in/api/users?page=2' \
     | wk-json-path "\$.data[?(@.last_name == 'Lawson')].email"
 
