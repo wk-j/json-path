@@ -15,4 +15,10 @@ dotnet tool install -g wk.JsonPath
 ```bash
 cat resource/input.json | wk-json-path '$.data[*].content[*].id'
 cat resource/input.json | wk-json-path '$.data[0].content[0].id'
+
+http -b 'https://reqres.in/api/users?page=2' \
+    | wk-json-path "\$.data[?(@.last_name == 'Lawson')].email"
+
+http -b 'https://reqres.in/api/users?page=2' \
+    | wk-json-path "\$.data[*].email"
 ```
